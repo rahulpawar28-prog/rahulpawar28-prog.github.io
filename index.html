@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul Pawar - Data Engineering Portfolio</title>
+    <title>Rahul Pratap Pawar - Software Development Team Lead & Scrum Master</title>
     <style>
         * {
             margin: 0;
@@ -14,8 +14,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #e0e0e0;
+            background: #0a0e27;
             min-height: 100vh;
         }
 
@@ -27,11 +27,13 @@
 
         /* Navigation */
         nav {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(10, 14, 39, 0.95);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
+            border-bottom: 2px solid #00ff88;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
         }
 
         nav ul {
@@ -43,42 +45,89 @@
         }
 
         nav a {
-            color: white;
+            color: #00ff88;
             text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
+            transition: all 0.3s;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
         }
 
         nav a:hover {
-            color: #667eea;
+            color: #ff006e;
+            text-shadow: 0 0 10px #ff006e;
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            color: white;
-            padding: 80px 20px 60px;
-            background: rgba(0, 0, 0, 0.3);
+            color: #00ff88;
+            padding: 100px 20px 60px;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(255, 0, 110, 0.1) 100%);
             margin-bottom: 40px;
+            border-bottom: 2px solid #00ffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 0, 110, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 0 20px #00ff88;
+            color: #00ff88;
         }
 
         .hero .subtitle {
             font-size: 1.5rem;
             margin-bottom: 20px;
-            opacity: 0.9;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
         }
 
         .hero .tagline {
             font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto 30px;
-            opacity: 0.85;
+            color: #ff006e;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: #00ffff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #ff006e;
+            text-shadow: 0 0 10px #ff006e;
         }
 
         .cta-buttons {
@@ -86,43 +135,53 @@
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 30px;
         }
 
         .cta-button {
             padding: 12px 30px;
-            border: 2px solid white;
+            border: 2px solid #00ff88;
             background: transparent;
-            color: white;
+            color: #00ff88;
             text-decoration: none;
             border-radius: 5px;
             transition: all 0.3s;
             cursor: pointer;
             font-size: 1rem;
             font-weight: 600;
+            text-transform: uppercase;
         }
 
         .cta-button.primary {
-            background: white;
-            color: #667eea;
+            background: #ff006e;
+            border-color: #ff006e;
+            color: #0a0e27;
+            box-shadow: 0 0 20px #ff006e;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px #00ff88;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        .cta-button.primary:hover {
+            box-shadow: 0 0 30px #ff006e;
         }
 
         /* Main Content */
         main {
-            background: white;
+            background: rgba(20, 25, 50, 0.8);
             margin-bottom: 40px;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
         }
 
         section {
             padding: 50px 40px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
         }
 
         section:last-child {
@@ -130,11 +189,12 @@
         }
 
         h2 {
-            color: #667eea;
+            color: #00ff88;
             font-size: 2.5rem;
             margin-bottom: 30px;
             position: relative;
             padding-bottom: 15px;
+            text-shadow: 0 0 10px #00ff88;
         }
 
         h2:after {
@@ -144,8 +204,13 @@
             left: 0;
             width: 60px;
             height: 4px;
-            background: #764ba2;
+            background: linear-gradient(90deg, #ff006e, #00ffff);
             border-radius: 2px;
+            box-shadow: 0 0 10px #ff006e;
+        }
+
+        h3 {
+            color: #00ffff;
         }
 
         /* Skills Section */
@@ -156,31 +221,97 @@
         }
 
         .skill-card {
-            background: #f8f9ff;
+            background: rgba(0, 255, 136, 0.05);
             padding: 20px;
             border-radius: 8px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #00ff88;
+            border-top: 2px solid #ff006e;
             transition: all 0.3s;
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+            border-left: 4px solid #ff006e;
+            border-top: 2px solid #00ffff;
         }
 
         .skill-card h3 {
-            color: #667eea;
+            color: #00ff88;
             margin-bottom: 15px;
             font-size: 1.3rem;
+            text-shadow: 0 0 10px #00ff88;
         }
 
         .skill-card ul {
             list-style-position: inside;
-            color: #555;
+            color: #b0b0b0;
         }
 
         .skill-card li {
             margin-bottom: 8px;
+        }
+
+        .skill-card li:before {
+            content: "▶ ";
+            color: #00ffff;
+            margin-right: 5px;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+            border-left: 3px solid #ff006e;
+            padding-left: 20px;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .experience-header h3 {
+            color: #00ff88;
+            font-size: 1.4rem;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        .experience-header .date {
+            color: #00ffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .experience-header .company {
+            color: #ff006e;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .experience-body ul {
+            list-style-position: inside;
+            color: #b0b0b0;
+            margin-top: 10px;
+        }
+
+        .experience-body li {
+            margin-bottom: 10px;
+        }
+
+        .experience-body li:before {
+            content: "◆ ";
+            color: #00ffff;
+            margin-right: 8px;
         }
 
         /* Projects Section */
@@ -191,29 +322,32 @@
         }
 
         .project-card {
-            background: #f8f9ff;
+            background: rgba(0, 255, 136, 0.05);
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s;
-            border: 1px solid #e0e0ff;
+            border: 2px solid #00ffff;
             display: flex;
             flex-direction: column;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 0 30px rgba(255, 0, 110, 0.4);
+            border-color: #ff006e;
         }
 
         .project-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.2) 0%, rgba(255, 0, 110, 0.2) 100%);
             padding: 20px;
-            color: white;
+            border-bottom: 2px solid #ff006e;
         }
 
         .project-header h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 8px;
+            color: #00ff88;
+            text-shadow: 0 0 10px #00ff88;
         }
 
         .project-body {
@@ -224,7 +358,7 @@
         }
 
         .project-body p {
-            color: #555;
+            color: #b0b0b0;
             margin-bottom: 15px;
             flex-grow: 1;
         }
@@ -237,71 +371,49 @@
         }
 
         .tech-tag {
-            background: #667eea;
-            color: white;
+            background: rgba(0, 255, 136, 0.2);
+            color: #00ff88;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        .project-link {
-            color: #667eea;
-            text-decoration: none;
             font-weight: 600;
-            margin-top: 15px;
-            display: inline-block;
-            transition: color 0.3s;
+            border: 1px solid #00ff88;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
         }
 
-        .project-link:hover {
-            color: #764ba2;
+        .tech-tag:hover {
+            background: #ff006e;
+            color: #0a0e27;
+            border-color: #ff006e;
+            box-shadow: 0 0 15px #ff006e;
         }
 
-        /* Experience Section */
-        .experience-item {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
+        /* Education Section */
+        .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(0, 255, 136, 0.05);
+            border-left: 3px solid #00ffff;
+            border-radius: 5px;
         }
 
-        .experience-item:last-child {
-            border-bottom: none;
+        .education-item h4 {
+            color: #00ff88;
+            margin-bottom: 5px;
         }
 
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .experience-header h3 {
-            color: #667eea;
-            font-size: 1.3rem;
-        }
-
-        .experience-header .date {
-            color: #999;
+        .education-item p {
+            color: #b0b0b0;
             font-size: 0.95rem;
-            font-weight: 500;
         }
 
-        .experience-header .company {
-            color: #764ba2;
+        .education-item .school {
+            color: #ff006e;
             font-weight: 600;
         }
 
-        .experience-body ul {
-            list-style-position: inside;
-            color: #555;
-            margin-top: 10px;
-        }
-
-        .experience-body li {
-            margin-bottom: 8px;
+        .education-item .year {
+            color: #00ffff;
         }
 
         /* Contact Section */
@@ -322,33 +434,49 @@
             align-items: center;
             gap: 10px;
             padding: 12px 20px;
-            background: #f8f9ff;
+            background: rgba(0, 255, 136, 0.1);
             border-radius: 8px;
             text-decoration: none;
-            color: #667eea;
+            color: #00ff88;
             transition: all 0.3s;
-            border: 1px solid #e0e0ff;
+            border: 2px solid #00ff88;
             font-weight: 600;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
         }
 
         .contact-link:hover {
-            background: #667eea;
-            color: white;
+            background: #ff006e;
+            color: #0a0e27;
+            border-color: #ff006e;
             transform: translateY(-3px);
+            box-shadow: 0 0 20px #ff006e;
         }
 
         /* Footer */
         footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
+            background: rgba(10, 14, 39, 0.95);
+            color: #00ff88;
             text-align: center;
             padding: 30px 20px;
             margin-top: 40px;
+            border-top: 2px solid #00ffff;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 0, 110, 0.2);
+            color: #ff006e;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 3px;
+            border: 1px solid #ff006e;
         }
 
         @media (max-width: 768px) {
@@ -371,6 +499,11 @@
             nav ul {
                 gap: 1rem;
             }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -378,182 +511,46 @@
     <nav class="container">
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <div class="hero" id="home">
         <div class="container">
-            <h1>Rahul Pawar</h1>
-            <p class="subtitle">Data Engineering Professional</p>
-            <p class="tagline">Building scalable data pipelines and solutions for complex data challenges</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="cta-button primary">View My Work</a>
-                <a href="#contact" class="cta-button">Get In Touch</a>
+            <div class="hero-content">
+                <h1>RAHUL PRATAP PAWAR</h1>
+                <p class="subtitle">Software Development Team Lead | Scrum Master</p>
+                <p class="tagline">15+ Years of IT Services Excellence | Production Management | Telecom BSS/OSS</p>
+                
+                <div class="contact-info">
+                    <a href="tel:+917757005838">📱 +91-7757005838</a>
+                    <a href="mailto:rahulpawar28@gmail.com">📧 rahulpawar28@gmail.com</a>
+                    <a href="https://linkedin.com/in/rahul-pawar-1730a71a" target="_blank">💼 LinkedIn</a>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#experience" class="cta-button primary">View Experience</a>
+                    <a href="#contact" class="cta-button">Get In Touch</a>
+                </div>
             </div>
         </div>
     </div>
 
     <main class="container">
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>🗄️ Databases</h3>
-                    <ul>
-                        <li>SQL (PostgreSQL, MySQL)</li>
-                        <li>NoSQL (MongoDB, Cassandra)</li>
-                        <li>Data Warehouses (Snowflake, BigQuery)</li>
-                        <li>Real-time Databases</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <h3>🔧 ETL/ELT Tools</h3>
-                    <ul>
-                        <li>Apache Spark</li>
-                        <li>Apache Airflow</li>
-                        <li>Kafka</li>
-                        <li>Talend, Informatica</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <h3>💻 Programming Languages</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>SQL</li>
-                        <li>Scala</li>
-                        <li>Java</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <h3>☁️ Cloud Platforms</h3>
-                    <ul>
-                        <li>AWS (S3, RDS, Glue)</li>
-                        <li>Google Cloud (BigQuery, Dataflow)</li>
-                        <li>Azure (Synapse, Data Factory)</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <h3>📊 Analytics & BI</h3>
-                    <ul>
-                        <li>Tableau</li>
-                        <li>Power BI</li>
-                        <li>Looker</li>
-                        <li>Data Modeling</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <h3>🛠️ DevOps & Tools</h3>
-                    <ul>
-                        <li>Docker & Kubernetes</li>
-                        <li>Git & CI/CD</li>
-                        <li>Jenkins</li>
-                        <li>Linux/Unix</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Real-time Data Pipeline</h3>
-                    </div>
-                    <div class="project-body">
-                        <p>Built a scalable real-time data pipeline processing millions of events per day using Apache Kafka and Spark Streaming, reducing data latency from 24 hours to 5 minutes.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Kafka</span>
-                            <span class="tech-tag">Spark</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">AWS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>ETL Orchestration Platform</h3>
-                    </div>
-                    <div class="project-body">
-                        <p>Designed and implemented an Apache Airflow-based ETL orchestration platform managing 500+ daily data workflows with advanced error handling and monitoring.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Airflow</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Data Warehouse Migration</h3>
-                    </div>
-                    <div class="project-body">
-                        <p>Led migration of on-premise data warehouse to Snowflake, optimizing queries for 40% better performance and reducing infrastructure costs by 35%.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Snowflake</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Cloud</span>
-                            <span class="tech-tag">AWS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Data Quality Framework</h3>
-                    </div>
-                    <div class="project-body">
-                        <p>Developed a comprehensive data quality and monitoring framework using Great Expectations, detecting data anomalies with 95% accuracy and preventing data incidents.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Great Expectations</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Monitoring</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Analytics Dashboard</h3>
-                    </div>
-                    <div class="project-body">
-                        <p>Created interactive analytics dashboards connecting real-time data pipelines to Tableau, enabling stakeholders to track KPIs and make data-driven decisions.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Tableau</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">BigQuery</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Data Governance Solution</h3>
-                    </div>
-                    <div class="project-body">
-                        <p>Implemented a data governance and metadata management system ensuring GDPR compliance and maintaining data lineage across 200+ data sources.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Metadata Management</span>
-                            <span class="tech-tag">Governance</span>
-                            <span class="tech-tag">Compliance</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Professional Summary -->
+        <section>
+            <h2>Professional Summary</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #b0b0b0;">
+                15+ Years of experience in IT Services, Production Support, Production Management, and Application Development with proven expertise in resolving complex client issues. 
+                Strong problem-solving skills coupled with confident decision-making for enabling effective solutions leading to high customer satisfaction. 
+                Successfully developed common support processes and operation models across Onshore and Offshore Teams. 
+                Implemented 100+ Process Automations for quality improvements and time savings across various accounts.
+                <br><br>
+                <strong style="color: #00ff88;">Worked with industry leaders:</strong> Sprint, Metro, T-Mobile, AT&T, USCC, Three UK/Ireland, Elisa Finland, and Charter/Spectrum Mobile.
+            </p>
         </section>
 
         <!-- Experience Section -->
@@ -563,17 +560,21 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <h3>Senior Data Engineer</h3>
-                        <p class="company">Tech Company ABC</p>
+                        <h3>Software Development Team Lead / Scrum Master</h3>
+                        <p class="company">Amdocs | Pune, India</p>
                     </div>
-                    <p class="date">2022 - Present</p>
+                    <p class="date">Jun 2025 – Present</p>
                 </div>
                 <div class="experience-body">
                     <ul>
-                        <li>Architected and deployed scalable data pipelines processing 10M+ events daily</li>
-                        <li>Led team of 5 data engineers in designing cloud-native solutions</li>
-                        <li>Reduced ETL processing time by 50% through optimization</li>
-                        <li>Implemented data quality frameworks achieving 99.9% accuracy</li>
+                        <li>Currently Leading Charter Moneymap Team with end-to-end delivery responsibility</li>
+                        <li>Led requirement gathering and analysis with stakeholders, ensuring clear documentation and seamless cross-team alignment</li>
+                        <li>Translated business needs into detailed solution designs, data mappings, and interface specifications</li>
+                        <li>Delivered optimized solutions on Amdocs Billing platforms, improving billing accuracy, compliance, and operational efficiency</li>
+                        <li>Developed and integrated ETL workflows; built high-performance reports and analytical models</li>
+                        <li>Supporting development team through design validation and technical guidance</li>
+                        <li>Executed functional, regression, and UAT cycles, ensuring end-to-end solution quality</li>
+                        <li>Provided post-deployment support, resolving issues and ensuring stable production performance</li>
                     </ul>
                 </div>
             </div>
@@ -581,17 +582,18 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <h3>Data Engineer</h3>
-                        <p class="company">XYZ Analytics</p>
+                        <h3>AT&T Moneymap Project - Scrum Master</h3>
+                        <p class="company">Amdocs | Pune, India</p>
                     </div>
-                    <p class="date">2020 - 2022</p>
+                    <p class="date">Jan 2025 – Jun 2025</p>
                 </div>
                 <div class="experience-body">
                     <ul>
-                        <li>Designed and maintained data pipelines for business intelligence</li>
-                        <li>Built ETL processes using Python and SQL</li>
-                        <li>Migrated legacy systems to cloud platforms (AWS)</li>
-                        <li>Collaborated with analytics teams to support reporting needs</li>
+                        <li>Scrum Master for AT&T Legacy-to-Digital Conversion Project (MoneyMap)</li>
+                        <li>Developed and maintained migration reconciliation controls between Digital and Legacy billing platforms</li>
+                        <li>Guided distributed Agile teams (offshore + onsite) as Scrum Master across multiple Iterations/PIs</li>
+                        <li>Conducted LLD Grooming sessions with solution architects to deliver high-quality migration assurance controls</li>
+                        <li>Ensured seamless feature delivery with quality gates at each Sprint and Program Increment</li>
                     </ul>
                 </div>
             </div>
@@ -599,19 +601,215 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <h3>Junior Data Engineer</h3>
-                        <p class="company">Data Solutions Inc.</p>
+                        <h3>Technical Business Operations Lead (Production Management)</h3>
+                        <p class="company">Amdocs | Pune, India</p>
                     </div>
-                    <p class="date">2019 - 2020</p>
+                    <p class="date">Mar 2022 – Dec 2024</p>
                 </div>
                 <div class="experience-body">
                     <ul>
-                        <li>Developed SQL queries and stored procedures for data extraction</li>
-                        <li>Assisted in designing data warehouse schemas</li>
-                        <li>Supported ETL testing and validation processes</li>
-                        <li>Learned best practices in data engineering and cloud technologies</li>
+                        <li>Led Production Management for T-Mobile Conversion Project; coordinated daily CRQ deployments and release bridges</li>
+                        <li>Introduced new automation methods and practices that significantly reduced turnaround time for operational tasks</li>
+                        <li>Prepared and presented KPI dashboards to customers and internal stakeholders on Weekly/Monthly/Quarterly basis</li>
+                        <li>Acted as primary bridge between customer teams and Delivery/SRE team, ensuring aligned expectations</li>
+                        <li>Conducted quarterly performance reviews and drove continuous improvement initiatives across the team</li>
+                        <li>Managed PRR (Production Readiness Reviews) and ORT (Operational Readiness Testing) for new establishment rollouts</li>
+                        <li>Identified and implemented automation opportunities to minimize human errors and streamline processes</li>
                     </ul>
                 </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Senior Software Developer</h3>
+                        <p class="company">Amdocs | Pune, India</p>
+                    </div>
+                    <p class="date">2019 – 2022</p>
+                </div>
+                <div class="experience-body">
+                    <ul>
+                        <li>Led business requirements analysis, solution design, and development of new application features and enhancements</li>
+                        <li>Trained new developers and programmers on company coding standards, design patterns, and review processes</li>
+                        <li>Reduced processing time by analyzing job schedules and implementing targeted performance modifications</li>
+                        <li>Managed change requests (CRs) and defect fixes aligned with modern business policies</li>
+                        <li>Interacted with customers and Amdocs vendors during migration phases to resolve production issues</li>
+                        <li>Supported multiple software migration activities, ensuring minimal disruption to production environments</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Software Support Engineer</h3>
+                        <p class="company">Amdocs | Pune, India</p>
+                    </div>
+                    <p class="date">2016 – 2018</p>
+                </div>
+                <div class="experience-body">
+                    <ul>
+                        <li>Managed and routed internal and external tickets (P1, P2, P3) with prompt resolution and escalation</li>
+                        <li>Prepared Root Cause Analysis (RCA) reports for major production incidents as requested by clients</li>
+                        <li>Performed special production checks during Change Request deployments and release builds</li>
+                        <li>Resolved end-of-day (EOD) job failures with documented justification and applied fixes</li>
+                        <li>Handled server-level issues including disk space, CPU/memory utilization, and job scheduling failures</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>System Analyst (BIMS – ETL/Revenue Assurance)</h3>
+                        <p class="company">Amdocs | Pune, India</p>
+                    </div>
+                    <p class="date">2012 – 2015</p>
+                </div>
+                <div class="experience-body">
+                    <ul>
+                        <li>Subject Matter Expert (SSME) for Billing Information Management System (BIMS) ETL tool for T-Mobile, Sprint, and Metro</li>
+                        <li>Wrote complex SQL (PL-SQL) jobs and Unix scripts for billing cycle reports and revenue leakage tracking</li>
+                        <li>Provided daily application support, alert monitoring, reject handling, and database cleanup</li>
+                        <li>Delivered on-call weekend support ensuring continuous operational availability</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Revenue Assurance Analyst</h3>
+                        <p class="company">Amdocs | Pune, India</p>
+                    </div>
+                    <p class="date">2010 – 2012</p>
+                </div>
+                <div class="experience-body">
+                    <ul>
+                        <li>Audited daily billing cycles to identify and eliminate revenue leakage and billing overcharges</li>
+                        <li>Validated invoices and generated reports ensuring all billing parameters reflected correctly for Retail and Wholesale</li>
+                        <li>Verified new and existing functionality compliance for billing accuracy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Core Competencies & Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🔧 Agile & Leadership</h3>
+                    <ul>
+                        <li>Agile / Scrum Master</li>
+                        <li>Team Leadership & Mentoring</li>
+                        <li>Kanban</li>
+                        <li>Stakeholder Management</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>📊 Production & Deployment</h3>
+                    <ul>
+                        <li>Production Management</li>
+                        <li>Deployment/Release Management</li>
+                        <li>Offshore/Onshore Coordination</li>
+                        <li>PRR & ORT Management</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>💻 Technical Stack</h3>
+                    <ul>
+                        <li>Unix, Shell Scripting</li>
+                        <li>SQL, PL-SQL</li>
+                        <li>Jenkins, Docker</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>📱 Telecom Products</h3>
+                    <ul>
+                        <li>Amdocs Ensemble (MAF/MPS/EMS)</li>
+                        <li>Revenue Management & Billing</li>
+                        <li>Rating & Usage</li>
+                        <li>OMS (Order Management)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🎯 Telecom BSS/OSS Domain</h3>
+                    <ul>
+                        <li>BSS/OSS Architecture</li>
+                        <li>Revenue Assurance</li>
+                        <li>Billing & OMS</li>
+                        <li>Usage & Mediation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🚀 Automation & Analytics</h3>
+                    <ul>
+                        <li>Analytics & AI</li>
+                        <li>SDLC & Solution Design</li>
+                        <li>Process Automation</li>
+                        <li>ETL Workflows</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🏢 Enterprise Tools</h3>
+                    <ul>
+                        <li>Eyeshare</li>
+                        <li>atomIQ</li>
+                        <li>Node.js</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>📈 Key Achievements</h3>
+                    <ul>
+                        <li>100+ Process Automations</li>
+                        <li>50% Processing Time Reduction</li>
+                        <li>99.9% System Accuracy</li>
+                        <li>Multiple Customer Accounts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education & Certifications</h2>
+            
+            <div class="education-item">
+                <h4>PG Diploma in Advanced Computing</h4>
+                <p><span class="school">CDAC-ACTS, Bangalore</span> | <span class="year">2007–2008</span></p>
+            </div>
+
+            <div class="education-item">
+                <h4>Bachelor of Science – Computer Science</h4>
+                <p><span class="school">Pune University, Pune</span> | <span class="year">2003–2007</span></p>
+            </div>
+
+            <div class="education-item">
+                <h4>PG Diploma in Product Management</h4>
+                <p><span class="school">Accredian</span> | <span class="year">2024</span></p>
+            </div>
+
+            <div class="education-item">
+                <h4>GenAI Master's Program (In Progress)</h4>
+                <p><span class="school">Edureka</span></p>
+            </div>
+
+            <div style="margin-top: 30px; padding: 20px; background: rgba(0, 255, 136, 0.1); border-left: 3px solid #00ff88; border-radius: 5px;">
+                <p style="color: #b0b0b0;"><strong style="color: #00ff88;">Additional Details:</strong></p>
+                <p style="color: #b0b0b0; margin-top: 10px;">
+                    <span class="badge">DOB: 28th March 1984</span>
+                    <span class="badge">Visa: Business Visa B1-B2 (USA) - Expiry 2027</span>
+                </p>
             </div>
         </section>
 
@@ -619,21 +817,19 @@
         <section id="contact">
             <h2>Let's Connect</h2>
             <div class="contact-content">
-                <p style="font-size: 1.1rem; color: #555; margin-bottom: 20px;">
-                    I'm always interested in discussing data engineering challenges, opportunities, and collaborations. Feel free to reach out!
+                <p style="font-size: 1.1rem; color: #b0b0b0; margin-bottom: 20px;">
+                    Open to discussing opportunities in Team Leadership, Agile Transformation, Production Management, and Telecom Solutions. 
+                    Let's connect and explore how we can achieve great things together!
                 </p>
                 <div class="contact-links">
-                    <a href="mailto:rahul@example.com" class="contact-link">
+                    <a href="mailto:rahulpawar28@gmail.com" class="contact-link">
                         📧 Email
                     </a>
-                    <a href="https://linkedin.com/in/rahulpawar28" class="contact-link" target="_blank">
+                    <a href="https://linkedin.com/in/rahul-pawar-1730a71a" class="contact-link" target="_blank">
                         💼 LinkedIn
                     </a>
-                    <a href="https://github.com/rahulpawar28-prog" class="contact-link" target="_blank">
-                        🐙 GitHub
-                    </a>
-                    <a href="https://twitter.com/rahulpawar28" class="contact-link" target="_blank">
-                        𝕏 Twitter
+                    <a href="tel:+917757005838" class="contact-link">
+                        📱 Call
                     </a>
                 </div>
             </div>
@@ -642,8 +838,8 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Rahul Pawar. All rights reserved.</p>
-            <p style="margin-top: 10px; opacity: 0.8;">Data Engineering | Cloud Solutions | ETL Pipelines</p>
+            <p>&copy; 2024 Rahul Pratap Pawar. All rights reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Team Lead | Scrum Master | Telecom BSS/OSS | 15+ Years IT Excellence</p>
         </div>
     </footer>
 </body>
