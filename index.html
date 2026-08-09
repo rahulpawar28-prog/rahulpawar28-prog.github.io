@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Pawar - Data Engineering Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 80px 20px 60px;
+            background: rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.85;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 12px 30px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .cta-button.primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main Content */
+        main {
+            background: white;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 50px 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #764ba2;
+            border-radius: 2px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .skill-card ul {
+            list-style-position: inside;
+            color: #555;
+        }
+
+        .skill-card li {
+            margin-bottom: 8px;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #f8f9ff;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid #e0e0ff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: white;
+        }
+
+        .project-header h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .project-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-body p {
+            color: #555;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        .project-link:hover {
+            color: #764ba2;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .experience-header h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+        }
+
+        .experience-header .date {
+            color: #999;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .experience-header .company {
+            color: #764ba2;
+            font-weight: 600;
+        }
+
+        .experience-body ul {
+            list-style-position: inside;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .experience-body li {
+            margin-bottom: 8px;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #667eea;
+            transition: all 0.3s;
+            border: 1px solid #e0e0ff;
+            font-weight: 600;
+        }
+
+        .contact-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="container">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="home">
+        <div class="container">
+            <h1>Rahul Pawar</h1>
+            <p class="subtitle">Data Engineering Professional</p>
+            <p class="tagline">Building scalable data pipelines and solutions for complex data challenges</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="cta-button primary">View My Work</a>
+                <a href="#contact" class="cta-button">Get In Touch</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🗄️ Databases</h3>
+                    <ul>
+                        <li>SQL (PostgreSQL, MySQL)</li>
+                        <li>NoSQL (MongoDB, Cassandra)</li>
+                        <li>Data Warehouses (Snowflake, BigQuery)</li>
+                        <li>Real-time Databases</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🔧 ETL/ELT Tools</h3>
+                    <ul>
+                        <li>Apache Spark</li>
+                        <li>Apache Airflow</li>
+                        <li>Kafka</li>
+                        <li>Talend, Informatica</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>💻 Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Scala</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>☁️ Cloud Platforms</h3>
+                    <ul>
+                        <li>AWS (S3, RDS, Glue)</li>
+                        <li>Google Cloud (BigQuery, Dataflow)</li>
+                        <li>Azure (Synapse, Data Factory)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>📊 Analytics & BI</h3>
+                    <ul>
+                        <li>Tableau</li>
+                        <li>Power BI</li>
+                        <li>Looker</li>
+                        <li>Data Modeling</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🛠️ DevOps & Tools</h3>
+                    <ul>
+                        <li>Docker & Kubernetes</li>
+                        <li>Git & CI/CD</li>
+                        <li>Jenkins</li>
+                        <li>Linux/Unix</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Real-time Data Pipeline</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Built a scalable real-time data pipeline processing millions of events per day using Apache Kafka and Spark Streaming, reducing data latency from 24 hours to 5 minutes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">Spark</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ETL Orchestration Platform</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Designed and implemented an Apache Airflow-based ETL orchestration platform managing 500+ daily data workflows with advanced error handling and monitoring.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Data Warehouse Migration</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Led migration of on-premise data warehouse to Snowflake, optimizing queries for 40% better performance and reducing infrastructure costs by 35%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Snowflake</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Cloud</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Data Quality Framework</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Developed a comprehensive data quality and monitoring framework using Great Expectations, detecting data anomalies with 95% accuracy and preventing data incidents.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Great Expectations</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Analytics Dashboard</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Created interactive analytics dashboards connecting real-time data pipelines to Tableau, enabling stakeholders to track KPIs and make data-driven decisions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Tableau</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">BigQuery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Data Governance Solution</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Implemented a data governance and metadata management system ensuring GDPR compliance and maintaining data lineage across 200+ data sources.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Metadata Management</span>
+                            <span class="tech-tag">Governance</span>
+                            <span class="tech-tag">Compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Senior Data Engineer</h3>
+                        <p class="company">Tech Company ABC</p>
+                    </div>
+                    <p class="date">2022 - Present</p>
+                </div>
+                <div class="experience-body">
+                    <ul>
+                        <li>Architected and deployed scalable data pipelines processing 10M+ events daily</li>
+                        <li>Led team of 5 data engineers in designing cloud-native solutions</li>
+                        <li>Reduced ETL processing time by 50% through optimization</li>
+                        <li>Implemented data quality frameworks achieving 99.9% accuracy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Data Engineer</h3>
+                        <p class="company">XYZ Analytics</p>
+                    </div>
+                    <p class="date">2020 - 2022</p>
+                </div>
+                <div class="experience-body">
+                    <ul>
+                        <li>Designed and maintained data pipelines for business intelligence</li>
+                        <li>Built ETL processes using Python and SQL</li>
+                        <li>Migrated legacy systems to cloud platforms (AWS)</li>
+                        <li>Collaborated with analytics teams to support reporting needs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Junior Data Engineer</h3>
+                        <p class="company">Data Solutions Inc.</p>
+                    </div>
+                    <p class="date">2019 - 2020</p>
+                </div>
+                <div class="experience-body">
+                    <ul>
+                        <li>Developed SQL queries and stored procedures for data extraction</li>
+                        <li>Assisted in designing data warehouse schemas</li>
+                        <li>Supported ETL testing and validation processes</li>
+                        <li>Learned best practices in data engineering and cloud technologies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <div class="contact-content">
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 20px;">
+                    I'm always interested in discussing data engineering challenges, opportunities, and collaborations. Feel free to reach out!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:rahul@example.com" class="contact-link">
+                        📧 Email
+                    </a>
+                    <a href="https://linkedin.com/in/rahulpawar28" class="contact-link" target="_blank">
+                        💼 LinkedIn
+                    </a>
+                    <a href="https://github.com/rahulpawar28-prog" class="contact-link" target="_blank">
+                        🐙 GitHub
+                    </a>
+                    <a href="https://twitter.com/rahulpawar28" class="contact-link" target="_blank">
+                        𝕏 Twitter
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Rahul Pawar. All rights reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Data Engineering | Cloud Solutions | ETL Pipelines</p>
+        </div>
+    </footer>
+</body>
+</html>
