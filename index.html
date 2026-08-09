@@ -14,8 +14,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #e0e0e0;
-            background: #0a0e27;
+            color: #d0d0d0;
+            background: #0d1117;
             min-height: 100vh;
         }
 
@@ -27,13 +27,13 @@
 
         /* Navigation */
         nav {
-            background: rgba(10, 14, 39, 0.95);
+            background: rgba(13, 17, 23, 0.95);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 2px solid #00ff88;
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+            border-bottom: 2px solid #1f6feb;
+            box-shadow: 0 0 20px rgba(31, 110, 235, 0.2);
         }
 
         nav ul {
@@ -45,7 +45,7 @@
         }
 
         nav a {
-            color: #00ff88;
+            color: #1f6feb;
             text-decoration: none;
             transition: all 0.3s;
             font-weight: 600;
@@ -55,18 +55,18 @@
         }
 
         nav a:hover {
-            color: #ff006e;
-            text-shadow: 0 0 10px #ff006e;
+            color: #58a6ff;
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            color: #00ff88;
+            color: #1f6feb;
             padding: 100px 20px 60px;
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(255, 0, 110, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(31, 110, 235, 0.08) 0%, rgba(88, 166, 255, 0.08) 100%);
             margin-bottom: 40px;
-            border-bottom: 2px solid #00ffff;
+            border-bottom: 2px solid #1f6feb;
             position: relative;
             overflow: hidden;
         }
@@ -78,8 +78,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 0, 110, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(31, 110, 235, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(88, 166, 255, 0.08) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -91,22 +91,22 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 10px;
-            text-shadow: 0 0 20px #00ff88;
-            color: #00ff88;
+            text-shadow: 0 0 20px rgba(31, 110, 235, 0.3);
+            color: #1f6feb;
         }
 
         .hero .subtitle {
             font-size: 1.5rem;
             margin-bottom: 20px;
-            color: #00ffff;
-            text-shadow: 0 0 10px #00ffff;
+            color: #58a6ff;
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
         }
 
         .hero .tagline {
             font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto 30px;
-            color: #ff006e;
+            color: #8ab8ff;
             font-weight: 600;
         }
 
@@ -120,14 +120,14 @@
         }
 
         .contact-info a {
-            color: #00ffff;
+            color: #58a6ff;
             text-decoration: none;
             transition: all 0.3s;
         }
 
         .contact-info a:hover {
-            color: #ff006e;
-            text-shadow: 0 0 10px #ff006e;
+            color: #79c0ff;
+            text-shadow: 0 0 10px rgba(121, 192, 255, 0.5);
         }
 
         .cta-buttons {
@@ -140,9 +140,9 @@
 
         .cta-button {
             padding: 12px 30px;
-            border: 2px solid #00ff88;
+            border: 2px solid #1f6feb;
             background: transparent;
-            color: #00ff88;
+            color: #1f6feb;
             text-decoration: none;
             border-radius: 5px;
             transition: all 0.3s;
@@ -153,35 +153,37 @@
         }
 
         .cta-button.primary {
-            background: #ff006e;
-            border-color: #ff006e;
-            color: #0a0e27;
-            box-shadow: 0 0 20px #ff006e;
+            background: #1f6feb;
+            border-color: #1f6feb;
+            color: #0d1117;
+            box-shadow: 0 0 20px rgba(31, 110, 235, 0.4);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 0 20px #00ff88;
-            text-shadow: 0 0 10px #00ff88;
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.4);
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
         }
 
         .cta-button.primary:hover {
-            box-shadow: 0 0 30px #ff006e;
+            background: #58a6ff;
+            border-color: #58a6ff;
+            box-shadow: 0 0 30px rgba(88, 166, 255, 0.5);
         }
 
         /* Main Content */
         main {
-            background: rgba(20, 25, 50, 0.8);
+            background: rgba(22, 27, 50, 0.6);
             margin-bottom: 40px;
             border-radius: 10px;
             overflow: hidden;
-            border: 2px solid #00ffff;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+            border: 2px solid #1f6feb;
+            box-shadow: 0 0 30px rgba(31, 110, 235, 0.2);
         }
 
         section {
             padding: 50px 40px;
-            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+            border-bottom: 1px solid rgba(31, 110, 235, 0.15);
         }
 
         section:last-child {
@@ -189,12 +191,12 @@
         }
 
         h2 {
-            color: #00ff88;
+            color: #1f6feb;
             font-size: 2.5rem;
             margin-bottom: 30px;
             position: relative;
             padding-bottom: 15px;
-            text-shadow: 0 0 10px #00ff88;
+            text-shadow: 0 0 10px rgba(31, 110, 235, 0.2);
         }
 
         h2:after {
@@ -204,13 +206,13 @@
             left: 0;
             width: 60px;
             height: 4px;
-            background: linear-gradient(90deg, #ff006e, #00ffff);
+            background: linear-gradient(90deg, #1f6feb, #58a6ff);
             border-radius: 2px;
-            box-shadow: 0 0 10px #ff006e;
+            box-shadow: 0 0 10px rgba(31, 110, 235, 0.3);
         }
 
         h3 {
-            color: #00ffff;
+            color: #58a6ff;
         }
 
         /* Skills Section */
@@ -221,31 +223,31 @@
         }
 
         .skill-card {
-            background: rgba(0, 255, 136, 0.05);
+            background: rgba(31, 110, 235, 0.05);
             padding: 20px;
             border-radius: 8px;
-            border-left: 4px solid #00ff88;
-            border-top: 2px solid #ff006e;
+            border-left: 4px solid #1f6feb;
+            border-top: 2px solid #58a6ff;
             transition: all 0.3s;
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
-            border-left: 4px solid #ff006e;
-            border-top: 2px solid #00ffff;
+            box-shadow: 0 0 20px rgba(31, 110, 235, 0.3);
+            border-left: 4px solid #58a6ff;
+            border-top: 2px solid #79c0ff;
         }
 
         .skill-card h3 {
-            color: #00ff88;
+            color: #1f6feb;
             margin-bottom: 15px;
             font-size: 1.3rem;
-            text-shadow: 0 0 10px #00ff88;
+            text-shadow: 0 0 10px rgba(31, 110, 235, 0.2);
         }
 
         .skill-card ul {
             list-style-position: inside;
-            color: #b0b0b0;
+            color: #a8b0c0;
         }
 
         .skill-card li {
@@ -254,7 +256,7 @@
 
         .skill-card li:before {
             content: "▶ ";
-            color: #00ffff;
+            color: #58a6ff;
             margin-right: 5px;
         }
 
@@ -262,8 +264,8 @@
         .experience-item {
             margin-bottom: 40px;
             padding-bottom: 30px;
-            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
-            border-left: 3px solid #ff006e;
+            border-bottom: 1px solid rgba(31, 110, 235, 0.15);
+            border-left: 3px solid #58a6ff;
             padding-left: 20px;
         }
 
@@ -281,26 +283,26 @@
         }
 
         .experience-header h3 {
-            color: #00ff88;
+            color: #1f6feb;
             font-size: 1.4rem;
-            text-shadow: 0 0 10px #00ff88;
+            text-shadow: 0 0 10px rgba(31, 110, 235, 0.2);
         }
 
         .experience-header .date {
-            color: #00ffff;
+            color: #58a6ff;
             font-size: 0.95rem;
             font-weight: 600;
         }
 
         .experience-header .company {
-            color: #ff006e;
+            color: #79c0ff;
             font-weight: 600;
             font-size: 1.1rem;
         }
 
         .experience-body ul {
             list-style-position: inside;
-            color: #b0b0b0;
+            color: #a8b0c0;
             margin-top: 10px;
         }
 
@@ -310,7 +312,7 @@
 
         .experience-body li:before {
             content: "◆ ";
-            color: #00ffff;
+            color: #58a6ff;
             margin-right: 8px;
         }
 
@@ -322,32 +324,32 @@
         }
 
         .project-card {
-            background: rgba(0, 255, 136, 0.05);
+            background: rgba(31, 110, 235, 0.05);
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s;
-            border: 2px solid #00ffff;
+            border: 2px solid #1f6feb;
             display: flex;
             flex-direction: column;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(255, 0, 110, 0.4);
-            border-color: #ff006e;
+            box-shadow: 0 0 30px rgba(31, 110, 235, 0.3);
+            border-color: #58a6ff;
         }
 
         .project-header {
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.2) 0%, rgba(255, 0, 110, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(31, 110, 235, 0.1) 0%, rgba(88, 166, 255, 0.1) 100%);
             padding: 20px;
-            border-bottom: 2px solid #ff006e;
+            border-bottom: 2px solid #58a6ff;
         }
 
         .project-header h3 {
             font-size: 1.3rem;
             margin-bottom: 8px;
-            color: #00ff88;
-            text-shadow: 0 0 10px #00ff88;
+            color: #1f6feb;
+            text-shadow: 0 0 10px rgba(31, 110, 235, 0.2);
         }
 
         .project-body {
@@ -358,7 +360,7 @@
         }
 
         .project-body p {
-            color: #b0b0b0;
+            color: #a8b0c0;
             margin-bottom: 15px;
             flex-grow: 1;
         }
@@ -371,49 +373,49 @@
         }
 
         .tech-tag {
-            background: rgba(0, 255, 136, 0.2);
-            color: #00ff88;
+            background: rgba(31, 110, 235, 0.15);
+            color: #1f6feb;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
-            border: 1px solid #00ff88;
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+            border: 1px solid #1f6feb;
+            box-shadow: 0 0 10px rgba(31, 110, 235, 0.2);
         }
 
         .tech-tag:hover {
-            background: #ff006e;
-            color: #0a0e27;
-            border-color: #ff006e;
-            box-shadow: 0 0 15px #ff006e;
+            background: #1f6feb;
+            color: #0d1117;
+            border-color: #1f6feb;
+            box-shadow: 0 0 15px rgba(31, 110, 235, 0.4);
         }
 
         /* Education Section */
         .education-item {
             margin-bottom: 20px;
             padding: 15px;
-            background: rgba(0, 255, 136, 0.05);
-            border-left: 3px solid #00ffff;
+            background: rgba(31, 110, 235, 0.05);
+            border-left: 3px solid #58a6ff;
             border-radius: 5px;
         }
 
         .education-item h4 {
-            color: #00ff88;
+            color: #1f6feb;
             margin-bottom: 5px;
         }
 
         .education-item p {
-            color: #b0b0b0;
+            color: #a8b0c0;
             font-size: 0.95rem;
         }
 
         .education-item .school {
-            color: #ff006e;
+            color: #79c0ff;
             font-weight: 600;
         }
 
         .education-item .year {
-            color: #00ffff;
+            color: #58a6ff;
         }
 
         /* Contact Section */
@@ -434,33 +436,33 @@
             align-items: center;
             gap: 10px;
             padding: 12px 20px;
-            background: rgba(0, 255, 136, 0.1);
+            background: rgba(31, 110, 235, 0.1);
             border-radius: 8px;
             text-decoration: none;
-            color: #00ff88;
+            color: #1f6feb;
             transition: all 0.3s;
-            border: 2px solid #00ff88;
+            border: 2px solid #1f6feb;
             font-weight: 600;
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+            box-shadow: 0 0 10px rgba(31, 110, 235, 0.15);
         }
 
         .contact-link:hover {
-            background: #ff006e;
-            color: #0a0e27;
-            border-color: #ff006e;
+            background: #1f6feb;
+            color: #0d1117;
+            border-color: #1f6feb;
             transform: translateY(-3px);
-            box-shadow: 0 0 20px #ff006e;
+            box-shadow: 0 0 20px rgba(31, 110, 235, 0.4);
         }
 
         /* Footer */
         footer {
-            background: rgba(10, 14, 39, 0.95);
-            color: #00ff88;
+            background: rgba(13, 17, 23, 0.95);
+            color: #1f6feb;
             text-align: center;
             padding: 30px 20px;
             margin-top: 40px;
-            border-top: 2px solid #00ffff;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            border-top: 2px solid #1f6feb;
+            box-shadow: 0 0 20px rgba(31, 110, 235, 0.2);
         }
 
         .footer-content {
@@ -470,13 +472,13 @@
 
         .badge {
             display: inline-block;
-            background: rgba(255, 0, 110, 0.2);
-            color: #ff006e;
+            background: rgba(31, 110, 235, 0.15);
+            color: #79c0ff;
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 0.85rem;
             margin: 3px;
-            border: 1px solid #ff006e;
+            border: 1px solid #1f6feb;
         }
 
         @media (max-width: 768px) {
@@ -543,13 +545,13 @@
         <!-- Professional Summary -->
         <section>
             <h2>Professional Summary</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: #b0b0b0;">
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #a8b0c0;">
                 15+ Years of experience in IT Services, Production Support, Production Management, and Application Development with proven expertise in resolving complex client issues. 
                 Strong problem-solving skills coupled with confident decision-making for enabling effective solutions leading to high customer satisfaction. 
                 Successfully developed common support processes and operation models across Onshore and Offshore Teams. 
                 Implemented 100+ Process Automations for quality improvements and time savings across various accounts.
                 <br><br>
-                <strong style="color: #00ff88;">Worked with industry leaders:</strong> Sprint, Metro, T-Mobile, AT&T, USCC, Three UK/Ireland, Elisa Finland, and Charter/Spectrum Mobile.
+                <strong style="color: #1f6feb;">Worked with industry leaders:</strong> Sprint, Metro, T-Mobile, AT&T, USCC, Three UK/Ireland, Elisa Finland, and Charter/Spectrum Mobile.
             </p>
         </section>
 
@@ -804,9 +806,9 @@
                 <p><span class="school">Edureka</span></p>
             </div>
 
-            <div style="margin-top: 30px; padding: 20px; background: rgba(0, 255, 136, 0.1); border-left: 3px solid #00ff88; border-radius: 5px;">
-                <p style="color: #b0b0b0;"><strong style="color: #00ff88;">Additional Details:</strong></p>
-                <p style="color: #b0b0b0; margin-top: 10px;">
+            <div style="margin-top: 30px; padding: 20px; background: rgba(31, 110, 235, 0.1); border-left: 3px solid #1f6feb; border-radius: 5px;">
+                <p style="color: #a8b0c0;"><strong style="color: #1f6feb;">Additional Details:</strong></p>
+                <p style="color: #a8b0c0; margin-top: 10px;">
                     <span class="badge">DOB: 28th March 1984</span>
                     <span class="badge">Visa: Business Visa B1-B2 (USA) - Expiry 2027</span>
                 </p>
@@ -817,7 +819,7 @@
         <section id="contact">
             <h2>Let's Connect</h2>
             <div class="contact-content">
-                <p style="font-size: 1.1rem; color: #b0b0b0; margin-bottom: 20px;">
+                <p style="font-size: 1.1rem; color: #a8b0c0; margin-bottom: 20px;">
                     Open to discussing opportunities in Team Leadership, Agile Transformation, Production Management, and Telecom Solutions. 
                     Let's connect and explore how we can achieve great things together!
                 </p>
